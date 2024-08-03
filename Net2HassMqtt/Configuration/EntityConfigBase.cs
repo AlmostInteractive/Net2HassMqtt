@@ -48,6 +48,11 @@ public abstract class EntityConfigBase
     public string? HaEventMemberName { get; protected internal set; }
 
     /// <summary>
+    /// The name of the model's HaEvent member. Only applicable to event entities.
+    /// </summary>
+    public bool PulseMode { get; protected internal set; } = false;
+
+    /// <summary>
     ///     The list of allowed event types. Only applicable to event entities.
     /// </summary>
     public string[] EventTypes { get; protected internal set; } = [];

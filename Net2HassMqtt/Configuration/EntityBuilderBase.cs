@@ -46,9 +46,10 @@ public abstract class EntityBuilderBase<T, TC>
     /// <summary>
     ///     The name of the model's event member. Only applicable to event entities.
     /// </summary>
-    public T WithEvent(string haEventMemberName) 
+    public T WithEvent(string haEventMemberName, bool pulseMode = false) 
     {
         EntityConfig.HaEventMemberName = haEventMemberName;
+        EntityConfig.PulseMode = pulseMode;
 
         var model = EntityConfig.Model;
         if (model == null)
